@@ -6,6 +6,7 @@ import AboutMe from './sections/AboutMe';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
+import Training from './sections/Training';
 
 export default function App () {
     return (
@@ -20,6 +21,7 @@ export default function App () {
             <Intro style={{left:'0'}} />
             <AboutMe />
             <Projects />
+            <Training />
             <Contact />
             <Footer />
         </Theme>

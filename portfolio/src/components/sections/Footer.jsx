@@ -1,4 +1,4 @@
-import { Flex, Theme, Heading, Text, Separator, Strong, Link } from "@radix-ui/themes";
+import { Flex, Theme, Heading, Text, Separator, Strong, Link, HoverCard, Box, Avatar } from "@radix-ui/themes";
 import { DevLink } from "../custom/DevLinks";
 
 export default function Footer () {
@@ -29,7 +29,7 @@ export default function Footer () {
                                     }}
                             >
                             <DevLink icon="icons/icons8-github-50.png" link="https://github.com/ThommysArt" />
-                            <DevLink icon="icons/icons8-linkedin-50.png" link="www.linkedin.com/in/thommysart" />
+                            <DevLink icon="icons/icons8-linkedin-50.png" link="https://www.linkedin.com/in/thommysart" />
                             <DevLink icon="icons/icons8-fiverr-50.png" link="https://www.fiverr.com/nekomaking?public_mode=true" />
                             <DevLink icon="icons/icons8-upwork-50.png" link="https://upwork.com/freelancers/~013b5077b228f99799" />
                             <DevLink icon="icons/icons8-stack-overflow-50.png" link="" />
@@ -38,7 +38,29 @@ export default function Footer () {
                     
                 </Flex>
                 <Separator size='4' />
-                <Text align='center' size='5' style={{padding: '5%', fontSize: '100%'}}>Copyright 2023. Made by <Strong><Link>Keabou Thomson</Link></Strong></Text>
+                <HoverCard.Root>
+                    <Text align='center' size='5' style={{padding: '5%', fontSize: '100%'}}>
+                        Copyright 2023. Made by <Strong><HoverCard.Trigger><Link>Keabou Thomson</Link></HoverCard.Trigger></Strong>
+                    </Text>
+                    <HoverCard.Content>
+                        <Flex gap="3" align="center">
+                            <Avatar
+                            size="3"
+                            src='/imgs/professionalpic.png'
+                            radius="full"
+                            fallback="T"
+                            />
+                            <Box>
+                                <Text as="div" size="2" weight="bold">
+                                    KEABOU NGUEMATIO THOMSON
+                                </Text>
+                                <Text as="div" size="2" color="gray">
+                                    Full Stack Developer
+                                </Text>
+                            </Box>
+                        </Flex>
+                    </HoverCard.Content>
+                </HoverCard.Root>
             </Flex>
         </Theme>
     )
